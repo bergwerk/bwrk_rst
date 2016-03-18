@@ -8,11 +8,4 @@ namespace BERGWERK\BwrkRst;
  */
 class Configuration extends \BERGWERK\BwrkUtility\Configuration
 {
-//    /**
-//     * @return mixed
-//     */
-//    public static function getTypes()
-//    {
-//        return self::getConfiguration('plugin.tx_bwrkrst.setup.types.');
-//    }
 }

@@ -1,6 +1,9 @@
 <?php
 namespace BERGWERK\BwrkRst;
 
+use BERGWERK\BwrkRst\FlexForm\Pi1;
+use BERGWERK\BwrkRst\FlexForm\Pi2;
+use BERGWERK\BwrkRst\FlexForm\Pi3;
 use BERGWERK\BwrkUtility\Utility\Tca\FlexForm;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -25,6 +28,11 @@ class Bootstrap
     {
         // Include TypoScript
         ExtensionManagementUtility::addStaticFile(self::$_extKey, 'Configuration/TypoScript', 'BERGWERK Address');
+
+        // Register Plugins
+        self::registerPlugin('Pi1', 'reStructuredText (content)', Pi1::class);
+        self::registerPlugin('Pi2', 'reStructuredText (file)', Pi2::class);
+        self::registerPlugin('Pi2', 'reStructuredText (external)', Pi3::class);
     }
 
     /**
@@ -32,6 +40,21 @@ class Bootstrap
      */
     static public function extLocalconf()
     {
+        // Configure Plugins
+        ExtensionUtility::configurePlugin('BERGWERK.' . self::$_extKey, 'Pi1',
+            array('Rst' => 'content'),
+            array('Rst' => 'content')
+        );
+
+        ExtensionUtility::configurePlugin('BERGWERK.' . self::$_extKey, 'Pi2',
+            array('Rst' => 'file'),
+            array('Rst' => 'file')
+        );
+
+        ExtensionUtility::configurePlugin('BERGWERK.' . self::$_extKey, 'Pi3',
+            array('Rst' => 'external'),
+            array('Rst' => 'external')
+        );
     }
 
     /**
