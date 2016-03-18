@@ -2,10 +2,10 @@
 
 namespace BERGWERK\BwrkRst\Utility\RST\Directives;
 
+use BERGWERK\BwrkRst\Utility\RST\Nodes\FigureNode;
+use Gregwar\RST\HTML\Nodes\CodeNode;
 use Gregwar\RST\Parser;
 use Gregwar\RST\Directive;
-
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
  * Renders a figure, example:
@@ -29,12 +29,31 @@ class Figure extends Directive
         return 'figure';
     }
 
+    /**
+     * @param Parser $parser
+     * @param CodeNode $node
+     * @param string $variable
+     * @param string $data
+     * @param array $options
+     */
     public function process(Parser $parser, $node, $variable, $data, array $options)
     {
-        DebuggerUtility::var_dump(array(
-            'data' => $data,
-            'options' => $options,
-            'baseUrl' => $this->baseUrl
-        ));
+        $figureNode = new FigureNode(array());
+        $figureNode->setLanguage($node->getLanguage());
+        $figureNode->setValue($node->getValue());
+
+        $options['url'] = $this->baseUrl . $data;
+
+        if (file_exists($options['url']))
+        {
+            $figureNode->setData($options);
+
+            $parser->getDocument()->addNode($figureNode);
+        }
+    }
+
+    public function wantCode()
+    {
+        return true;
     }
 }
