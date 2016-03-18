@@ -32,7 +32,7 @@ class Bootstrap
         // Register Plugins
         self::registerPlugin('Pi1', 'reStructuredText (content)', Pi1::class);
         self::registerPlugin('Pi2', 'reStructuredText (file)', Pi2::class);
-        self::registerPlugin('Pi2', 'reStructuredText (external)', Pi3::class);
+        self::registerPlugin('Pi3', 'reStructuredText (external)', Pi3::class);
     }
 
     /**
