@@ -30,7 +30,8 @@ class Pi1 extends FlexForm
     public function render()
     {
         $this->addSheet('general', array(
-            $this->addTextField('rst', false)
+            $this->addTextField('rst', false),
+            $this->addInputField('base_url')
         ));
 
         $xml = $this->renderFlexForm();

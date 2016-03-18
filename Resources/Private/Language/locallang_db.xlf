@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2015-12-01T08:36:29Z" product-name="bwrk_rst">
+        <header/>
+        <body>
+            <trans-unit id="flexform.Pi1.general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="flexform.Pi1.rst">
+                <source>reStructuredText (Content)</source>
+            </trans-unit>
+            <trans-unit id="flexform.Pi1.base_url">
+                <source>Base Url for realtive paths</source>
+            </trans-unit>
+
+            <trans-unit id="flexform.Pi2.general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="flexform.Pi2.rst">
+                <source>reStructuredText (Files)</source>
+            </trans-unit>
+
+            <trans-unit id="flexform.Pi3.general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="flexform.Pi3.rst">
+                <source>reStructuredText (URL)</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
