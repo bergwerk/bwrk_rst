@@ -70,6 +70,8 @@ class RstController extends ActionController
     {
         $parser = new Parser();
         $parser->registerDirective(new Figure($baseUrl));
-        return $parser->parse($rst);
+        $html = $parser->parse($rst);
+
+        return '<div class="tx-bwrkrst">' . $html . '</div>';
     }
 }
