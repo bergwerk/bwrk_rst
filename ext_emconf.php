@@ -1,6 +1,6 @@
 <?php
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'reStructured Text',
+	'title' => 'reStructuredText',
 	'description' => 'parse RST files and content',
 	'category' => 'plugin',
 	'version' => '0.1.0',
