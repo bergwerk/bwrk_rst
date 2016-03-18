@@ -1,7 +1,0 @@
-plugin.tx_bwrkrst {
-    view {
-        partialRootPath = EXT:bwrk_rst/Resources/Private/Partials/
-        templateRootPath = EXT:bwrk_rst/Resources/Private/Templates/
-        layoutRootPath = EXT:bwrk_rst/Resources/Private/Layouts/
-    }
-}
