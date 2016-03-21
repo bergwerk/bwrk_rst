@@ -1,3 +1,4 @@
 page.includeCSS.bwrk_rst_prism = EXT:bwrk_rst/Resources/Public/Css/prism.css
 
 page.includeJSFooter.bwrk_rst_prism = EXT:bwrk_rst/Resources/Public/Js/prism.js
+page.includeJSFooter.bwrk_rst_prism_extend = EXT:bwrk_rst/Resources/Public/Js/prism_extend.js
