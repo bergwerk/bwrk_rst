@@ -1,10 +1,38 @@
 {
   "name": "bergwerk/bwrk-rst",
-  "type": "typo3-cms-extension",
   "description": "parse RST files and content",
-  "homepage": "https://www.bergwerk.ag/",
-  "license": ["GPL-2.0+"],
   "keywords": ["TYPO3 CMS", "RST", "parser"],
-  "version": "1.1.1",
-  "minimum-stability":"stable"
+  "version": "1.1.2",
+  "minimum-stability":"stable",
+  "type": "typo3-cms-extension",
+  "homepage": "https://www.bergwerk.ag",
+  "authors": [
+      {
+          "name": "BERGWERK",
+          "role": "Developer",
+          "homepage": "https://www.bergwerk.ag"
+      }
+  ],
+  "license": ["GPL-2.0-or-later"],
+  "require": {
+    "typo3/cms-core": ">7.6"
+  },
+  "replace": {
+    "bwrk_rst": "self.version",
+    "typo3-ter/bwrk_rst": "self.version"
+  },
+  "autoload": {
+    "psr-4": {
+      "BERGWERK\\BwrkRst\\": "Classes"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0.0"
+    },
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": ".Build/Web"
+    }
+  }
 }
